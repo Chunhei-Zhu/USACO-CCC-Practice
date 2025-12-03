@@ -1,2 +1,2 @@
 # USACO-CCC-Practice
-My solutions for USACO and CCC problems.
+My python solutions for USACO (Bronze/Silver) and CCC (Senior) algorithmic problems.

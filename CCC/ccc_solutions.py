@@ -42,6 +42,7 @@ def solve_sunflowers():
             print(*row)
     except: pass
 
+#solve_sunflowers()
 
 # ================================
 # CCC 2017 J4 – Favourite Times (Practice)
@@ -77,6 +78,7 @@ def solve_favourite_times():
         print(a)
     except: pass
 
+#solve_favourite_times()
 
 # ================================
 # CCC 2025 J3 – Product Codes
@@ -123,6 +125,7 @@ def solve_product_codes():
             print(f"{caps}{nums}")
     except: pass
 
+#solve_product_codes()
 
 # ================================
 # CCC 2019 J2 – Time to Decompress
@@ -139,6 +142,7 @@ def solve_time_to_decompress():
             print(s * n)
     except: pass
 
+#solve_time_to_decompress()
 
 # ================================
 # CCC 2021 J1 – Boiling Water
@@ -159,6 +163,7 @@ def solve_boiling_water():
             print(-1)
     except: pass
 
+#solve_boiling_water()
 
 # ============================================
 # CCC 2020 Senior 2: Escape Room
@@ -201,6 +206,7 @@ def solve_escape_room():
         print("no")
     except: pass
 
+#solve_escape_room()
 
 # ===============================================================
 # CCC 2016 S2: Tandem Bicycle
@@ -245,6 +251,7 @@ def solve_tandem_bicycle():
             print(an)
     except: pass
 
+#solve_tandem_bicycle()
 
 # ===============================================================
 # CCC 2022 Senior 2: Good Groups
@@ -283,6 +290,8 @@ def solve_good_groups():
         print(violations)
     except: pass
 
+#solve_good_groups()
+
 # =====================================================
 # CCC 2012 - Senior 5 / Junior 5
 # Problem: Mouse Journey
@@ -313,6 +322,7 @@ def solve_mouse_journey():
         print(result)
     except: pass
 
+#solve_mouse_journey()
 
 # ============================================================
 # CCC 2021 Senior 2 — Modern Art
@@ -353,3 +363,32 @@ def solve_modern_art():
 
         print(black)
     except: pass
+
+#solve_modern_art()
+
+# ============================================================
+# CCC 2017 Senior 2 – High Tide, Low Tide
+# Link : https://dmoj.ca/problem/ccc17s2
+# ============================================================
+
+def solve_high_tide_low_tide():
+    try:
+        num = int(input().strip())
+        data = list(map(int,input().split()))
+        data.sort()
+        mid = (num + 1) // 2
+        low_tides = data[:mid]
+        high_tides = data[mid:]
+        low_tides.reverse()
+        result = []
+        for i in range(len(high_tides)):
+            result.append(low_tides[i])
+            result.append(high_tides[i])
+        if len(low_tides) > len(high_tides):
+            result.append(low_tides[-1])
+        print(*result)
+    except Exception as e:
+        print("Error:", e)
+
+#solve_high_tide_low_tide()
+

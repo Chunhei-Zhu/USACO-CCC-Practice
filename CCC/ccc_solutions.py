@@ -392,3 +392,49 @@ def solve_high_tide_low_tide():
 
 #solve_high_tide_low_tide()
 
+# ============================================================
+# CCC 2015 Senior 1 – Zero That Out
+# Link: https://dmoj.ca/problem/ccc15s1
+# ============================================================
+
+def solve_zero_that_out():
+    print('Enter Test Data To 29.Zero That Out')
+    try:
+        import sys
+        input_data = sys.stdin.read().split()
+        
+        if not input_data: return
+        
+        k = int(input_data[0])
+        numbers = []
+        for i in input_data[1:]:
+            num = int(i)
+            if num == 0:
+                numbers.pop()
+            else:
+                numbers.append(num)
+        print(sum(numbers))
+        
+    except Exception as e:
+        print("Error:", e)
+
+#solve_zero_that_out()
+
+def solve_zero_that_out_advanced():
+    try:
+        import sys
+        data = sys.stdin.read().split()
+        k = data[0]
+        num = list(map(int,data[1:]))
+        top = 0
+        for val in num:
+            if val == 0:
+                top -= 1
+            else:
+                num[top] = val
+                top += 1
+        print(sum(num[:top]))
+    except Exception as e:
+        print("Error:", e)
+
+#solve_zero_that_out_advanced()

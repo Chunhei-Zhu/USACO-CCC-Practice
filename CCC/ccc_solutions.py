@@ -33,7 +33,7 @@ def check(num,mat):
     return True
 
 def solve_sunflowers():
-    print('Enter Test Data To 6.Sunflowers')
+    print('Enter Test Data To Sunflowers')
     try:
         num = int(input().strip())
         mat = [list(map(int, input().split())) for _ in range(num)]
@@ -50,7 +50,7 @@ def solve_sunflowers():
 # ================================
 
 def solve_favourite_times():
-    print('Enter Test Data To 8.Favourite Time')
+    print('Enter Test Data To Favourite Time')
     try:
         num = int(input().strip())
         hour = 12
@@ -113,7 +113,7 @@ def num(s):
     return total
 
 def solve_product_codes():
-    print('Enter Test Data To 9.product codes')
+    print('Enter Test Data To product codes')
     try:
         n = int(input().strip())
         s = [input().strip() for _ in range(n)]
@@ -133,7 +133,7 @@ def solve_product_codes():
 # ================================
 
 def solve_time_to_decompress():
-    print('Enter Test Data To 10.Time to Decompress')
+    print('Enter Test Data To Time to Decompress')
     try:
         num = int(input().strip())
         data = [input().split() for _ in range(num)]
@@ -150,7 +150,7 @@ def solve_time_to_decompress():
 # ================================
 
 def solve_boiling_water():
-    print('Enter Test Data To 11.Boiling Water')
+    print('Enter Test Data To Boiling Water')
     try:
         b = int(input())
         p = 5 * b - 400
@@ -397,8 +397,7 @@ def solve_high_tide_low_tide():
 # Link: https://dmoj.ca/problem/ccc15s1
 # ============================================================
 
-def solve_zero_that_out():
-    print('Enter Test Data To 29.Zero That Out')
+def solve_zero_that_out_using_stack():
     try:
         import sys
         input_data = sys.stdin.read().split()
@@ -420,7 +419,7 @@ def solve_zero_that_out():
 
 #solve_zero_that_out()
 
-def solve_zero_that_out_advanced():
+def solve_zero_that_out_using_two_pointers():
     try:
         import sys
         data = sys.stdin.read().split()
@@ -438,3 +437,4 @@ def solve_zero_that_out_advanced():
         print("Error:", e)
 
 #solve_zero_that_out_advanced()
+

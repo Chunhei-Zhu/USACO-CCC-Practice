@@ -399,7 +399,6 @@ def solve_high_tide_low_tide():
 
 def solve_zero_that_out_using_stack():
     try:
-        import sys
         input_data = sys.stdin.read().split()
         
         if not input_data: return
@@ -421,7 +420,6 @@ def solve_zero_that_out_using_stack():
 
 def solve_zero_that_out_using_two_pointers():
     try:
-        import sys
         data = sys.stdin.read().split()
         k = data[0]
         num = list(map(int,data[1:]))
@@ -437,4 +435,5 @@ def solve_zero_that_out_using_two_pointers():
         print("Error:", e)
 
 #solve_zero_that_out_advanced()
+
 

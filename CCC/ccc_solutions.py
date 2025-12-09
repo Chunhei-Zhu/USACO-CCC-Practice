@@ -436,4 +436,21 @@ def solve_zero_that_out_using_two_pointers():
 
 #solve_zero_that_out_advanced()
 
+# ============================================================
+# CCC 2025 Senior Problem S1: Positioning Peter's Paintings
+# Link: https://cemc.uwaterloo.ca/sites/default/files/documents/2025/2025EuclidContest.html
+# ============================================================
+
+def solve_Positioning_Peter_Paintings():
+    print("Enter Test Data To Positioning Peter's Paintings")
+    try:
+        input_data = sys.stdin.read().split()
+        a,b,c,d = map(int,input_data)
+        an = ((a + c)+max(b,d))*2
+        an2 = ((b + d)+max(a,c))*2
+        print(min(an,an2))
+
+    except Exception as e: 
+        print("Error:", e)
+#solve_Positioning_Peter_Paintings()
 

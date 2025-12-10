@@ -623,3 +623,32 @@ def solve_word_processor():
                 a = b
         print()
     except: pass
+
+# ============================================================
+# USACO 2017 December Bronze - The Bovine Shuffle
+# Link: http://www.usaco.org/index.php?page=viewproblem2&cpid=760
+# ============================================================
+
+def solve_the_bovine_shuffle():
+    try:
+        data = sys.stdin.read().split()
+        n = int(data[0])
+        nums = []
+        for i in range(n):
+            a = int(data[i+1])
+            nums.append(a-1)
+        final_cows = data[n+1:]
+        current_cows = final_cows
+        for _ in range(3):
+            past_ids = [0] * n
+            for i in range(n):
+                a = nums[i]
+                past_ids[i] = current_cows[a]
+            current_cows = past_ids
+        for i in current_cows:
+            print(i)
+    except Exception as e:
+        print("Error:", e)
+#solve_the_bovine_shuffle()
+
+

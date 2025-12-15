@@ -647,8 +647,48 @@ def solve_the_bovine_shuffle():
             current_cows = past_ids
         for i in current_cows:
             print(i)
+
     except Exception as e:
         print("Error:", e)
 #solve_the_bovine_shuffle()
 
+# ================================
+# USACO Bronze: Mixing Milk (review)
+# Link: https://usaco.org/index.php?cpid=855&page=viewproblem2
+# ================================
+
+import sys
+def solve_mixing_milk_review():
+    data = sys.stdin.read().split()
+    a = [int(data[0]),int(data[1])]
+    b = [int(data[2]),int(data[3])]
+    c = [int(data[4]),int(data[5])]
+    all = []
+    for i in range(34):
+        n1 = a[1] + b[1]
+        b[1] = min(b[0],n1)
+        a[1] = 0
+        if b[0] <= n1:
+            a[1] = n1 - b[0]
+            b[1] = b[0]
+        if i == 33:
+            break
+        n2 = c[1] + b[1]
+        c[1] = min(c[0],n2)
+        b[1] = 0
+        if c[0] <= n2:
+            b[1] = n2 - c[0]
+            c[1] = c[0]
+        n3 = c[1] + a[1]
+        a[1] = min(a[0],n3)
+        c[1] = 0
+        if a[0] <= n3:
+            c[1] = n3 - a[0]
+            a[1] = a[0]
+    print(a[1])
+    print(b[1])
+    print(c[1])
+
+#if __name__ == "__main__":
+    #solve_mixing_milk_review()
 

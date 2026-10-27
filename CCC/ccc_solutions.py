@@ -237,17 +237,17 @@ def solve_tandem_bicycle():
         if type == 1:
             farmers = high_low(num,farmers)
             city = high_low(num,city)
-            an = 0
+            a = 0
             for i in range(num):
                 an += max(farmers[i],city[i])
-            print(an)
+            print(a)
 
         elif type == 2:
             farmers = high_low(num,farmers)
             city = low_high(num,city)
-            an = 0
+            a = 0
             for i in range(num):
-                an += max(farmers[i],city[i])
+                a += max(farmers[i],city[i])
             print(an)
     except: pass
 

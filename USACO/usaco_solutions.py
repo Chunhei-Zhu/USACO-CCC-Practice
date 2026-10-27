@@ -150,7 +150,7 @@ def mixing_ops(a, ah, b, bh, c, ch):
     print(ch)
 
 def solve_mixing_milk():
-    print('Enter Test Data To 4.Mixing Milk')
+    print('Ente Test Data To 4.Mixing Milk')
     try:
         data = sys.stdin.read().split()
         if not data: return
